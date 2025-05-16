@@ -1,6 +1,6 @@
+// main.dart
 import 'package:flutter/material.dart';
-import 'package:mini_task/tweet.dart';
-
+import 'todo_list_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,18 +8,16 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-   
+      title: 'ToDo App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        colorSchemeSeed: Colors.indigo,
       ),
-     
-      home: const Tweet(title: ' Demo Home Page'),
-   
+      home: const TodoListPage(),
     );
   }
 }
